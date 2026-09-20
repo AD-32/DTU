@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>IAP</TargetName>
+      <TargetName>RS485</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060960::V5.06 update 7 (build 960)::.\armcc</pCCUsed>
@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>..\..\Output\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -408,16 +408,6 @@
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>User/IAP</GroupName>
-          <Files>
-            <File>
-              <FileName>iap.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\IAP\iap.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -519,16 +509,6 @@
               <FileType>1</FileType>
               <FilePath>..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c</FilePath>
             </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -550,9 +530,34 @@
               <FilePath>..\..\Drivers\BSP\KEY\key.c</FilePath>
             </File>
             <File>
-              <FileName>stmflash.c</FileName>
+              <FileName>rs485.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Drivers\BSP\STMFLASH\stmflash.c</FilePath>
+              <FilePath>..\..\Drivers\BSP\RS485\rs485.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/USMART</GroupName>
+          <Files>
+            <File>
+              <FileName>usmart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Middlewares\USMART\usmart.c</FilePath>
+            </File>
+            <File>
+              <FileName>usmart_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Middlewares\USMART\usmart_config.c</FilePath>
+            </File>
+            <File>
+              <FileName>usmart_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Middlewares\USMART\usmart_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>usmart_str.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Middlewares\USMART\usmart_str.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -580,6 +585,7 @@
     <Layers>
       <Layer>
         <LayName>atk_f407</LayName>
+        <LayTarg>0</LayTarg>
         <LayPrjMark>1</LayPrjMark>
       </Layer>
     </Layers>
